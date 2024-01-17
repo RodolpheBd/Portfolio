@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial Bold';
+    font-size: 24px;
+}
+
+*::selection {
+    background: #FF90E8;
+}
+
+@font-face {
+    font-family: 'mabry_problack';
+    src: url('font/Mabry/MabryBlack/mabrypro-black-webfont.woff2') format('woff2'),
+         url('font/Mabry/MabryBlack/mabrypro-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'mabry_probold';
+    src: url("font/Mabry/MabryBold/mabrypro-bold-webfont.woff2") format("woff2"),
+         url("font/Mabry/MabryBold/mabrypro-bold-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'mabry_proregular';
+    src: url('font/Mabry/MabryRegular/mabrypro-regular-webfont.woff2') format('woff2'),
+         url('font/Mabry/MabryRegular/mabrypro-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Arial Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Arial Bold'), url('font/Arial/ArialBold.woff') format('woff');
+}
+
+body {
+    background-color: #FF90E8;
+    height: 8640px;
+}
+
+header {
+    height: 1080px;
+}
+
+.AboutMe {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0px 100px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.AboutMe, .ProfessionalExperience {
+    background-color: #000;
+    height: 1080px;
+}
+
+.AboutMe-img {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 1000px;
+}
+
+.AboutMe-Information {
+    display: flex;
+    flex-direction: column;
+    gap: 512px;
+    padding-top: 64px;
+}
+
+.AboutMe-Information-CV{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.test {
+    color: #FF90E8;
+}
+
+.Skills, .Projects {
+    background-color: #FFF;
+    height: 1080px;
+} 
+
+.Skills {
+    height: 5400px;
+}
+
+nav {
+    padding: 32px 64px;
+}
+
+nav, .nav-bar-left, .header, .header-main {
+    display: flex;
+}
+
+nav, .nav-bar-left {
+    align-items: center;
+}
+
+.header-main {
+    justify-content: center;
+    gap: 200px;
+}
+
+nav {
+    justify-content: space-between;
+}
+
+.nav-bar-left {
+    gap: 32px;
+}
+
+.header {
+    flex-direction: column;
+    padding: 470px 0px;
+}
+
+.header, .nav-bar-left {
+    cursor: default;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 128px;
+    font-family: 'mabry_problack';
+}
+
+h2 {
+    font-size: 72px;
+    padding: 100px 0px;
+    font-family: 'mabry_probold';
+}
+
+h3 {
+    font-size: 48px;
+    font-family: 'mabry_proregular';
+}
+
+.AboutMe h2, .AboutMe p, .ProfessionalExperience h2, .ProfessionalExperience p {
+    color: #FFF;
+}
+
+.button {
+    padding: 10px 20px;
+    border: 3px solid #000;
+}
+/*
+.button:hover {
+
+    box-shadow: 0.25rem 0.25rem 0rem #000;
+    background-color: #000;
+    color: #FF90E8;
+}
+*/
+
+.ligne {
+    border: 2px solid #000;
+}
+
+.Skills h3 {
+    padding: 100px 0px 100px 100px;
+}
+
+.Skills img {
+    height: 128px;
+}
+
+.Skills .paragraphe {
+    padding-left: 100px;
+}
+
+.Skills-box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Skills-box-grid {
+    display: grid;
+    grid-template-columns: 250px 250px 250px 250px 250px 250px;
+    grid-template-rows: 250px;
+    gap: 50px;
+}
+
+.Skills-box-grid-long {
+    grid-template-rows: 250px 250px;
+}
+
+.Skills-box-grid-one {
+    border-radius: 20px;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.15);
+    transition: all linear .3s;
+    border: 2px solid #000
+}
+
+.Skills-box-grid-one:hover {
+    background-color: #FF90E8;
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
+.box {
+    padding-top: 20px;
+    margin-top: 10px;
+    text-align: center;
+    width: 250px;
+    border-top: 2px solid #000
+}
+
+
