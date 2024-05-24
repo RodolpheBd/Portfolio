@@ -1,237 +1,371 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial Bold';
-    font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
 }
 
 *::selection {
-    background: #FF90E8;
+  background: #ff90e8;
 }
 
 @font-face {
-    font-family: 'mabry_problack';
-    src: url('font/Mabry/MabryBlack/mabrypro-black-webfont.woff2') format('woff2'),
-         url('font/Mabry/MabryBlack/mabrypro-black-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: "mabry_problack";
+  src: url("font/Mabry/MabryBlack/mabrypro-black-webfont.woff2") format("woff2"),
+    url("font/Mabry/MabryBlack/mabrypro-black-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'mabry_probold';
-    src: url("font/Mabry/MabryBold/mabrypro-bold-webfont.woff2") format("woff2"),
-         url("font/Mabry/MabryBold/mabrypro-bold-webfont.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
+  font-family: "mabry_probold";
+  src: url("font/Mabry/MabryBold/mabrypro-bold-webfont.woff2") format("woff2"),
+    url("font/Mabry/MabryBold/mabrypro-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'mabry_proregular';
-    src: url('font/Mabry/MabryRegular/mabrypro-regular-webfont.woff2') format('woff2'),
-         url('font/Mabry/MabryRegular/mabrypro-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'Arial Bold';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Arial Bold'), url('font/Arial/ArialBold.woff') format('woff');
+  font-family: "mabry_proregular";
+  src: url("font/Mabry/MabryRegular/mabrypro-regular-webfont.woff2")
+      format("woff2"),
+    url("font/Mabry/MabryRegular/mabrypro-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-    background-color: #FF90E8;
-    height: 8640px;
+  background-color: #ff90e8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
-    height: 1080px;
+  height: 100%;
+}
+
+.AboutMe,
+.Skills,
+.ProfessionalExperience,
+.Projects {
+  width: 1920px;
 }
 
 .AboutMe {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    padding: 0px 100px;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  gap: 64px;
 }
 
-.AboutMe, .ProfessionalExperience {
-    background-color: #000;
-    height: 1080px;
+.AboutMe p {
+  font-weight: 600;
+}
+
+.AboutMe,
+.ProfessionalExperience {
+  background-color: #000;
+  height: 1080px;
 }
 
 .AboutMe-img {
-    display: flex;
-    flex-direction: column-reverse;
-    width: 1000px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.AboutMe-img img {
+  width: 810px;
 }
 
 .AboutMe-Information {
-    display: flex;
-    flex-direction: column;
-    gap: 512px;
-    padding-top: 64px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 100px;
+  padding-top: 64px;
 }
 
-.AboutMe-Information-CV{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.AboutMe-Information-CV {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
 }
 
-.test {
-    color: #FF90E8;
+.AboutMe-Information-CV-button {
+  color: #fff;
+  padding: 10px 20px;
+  border: 3px solid #fff;
+  transition: all 0.3s ease-in-out;
 }
 
-.Skills, .Projects {
-    background-color: #FFF;
-    height: 1080px;
-} 
+.AboutMe-Information-CV-button:hover {
+  background-color: #fff;
+  color: #000;
+  transform: translateY(-4px) translateX(-2px);
+  box-shadow: 5px 5px 0 0 #ff90e8;
+}
+
+.AboutMe-Information-CV-button:active {
+  transform: translateY(2px) translateX(1px);
+  box-shadow: 0 0 0 0 black;
+}
+
+.Skills,
+.Contact,
+.ProfessionalExperience,
+.Projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Skills,
+.Projects {
+  background-color: #fff;
+  height: 1080px;
+}
+
+.Projects {
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
 
 .Skills {
-    height: 5400px;
+  height: 3320px;
+  /*height: 5400px;*/
+}
+
+.Contact {
+  height: 100vh;
 }
 
 nav {
-    padding: 32px 64px;
+  padding: 32px 64px;
 }
 
-nav, .nav-bar-left, .header, .header-main {
-    display: flex;
+nav,
+.nav-bar-left,
+.header-main {
+  display: flex;
 }
 
-nav, .nav-bar-left {
-    align-items: center;
+nav,
+.nav-bar-left {
+  align-items: center;
+}
+
+.nav-bar-center {
+  display: flex;
+  align-items: center;
 }
 
 .header-main {
-    justify-content: center;
-    gap: 200px;
+  justify-content: center;
+  gap: 368px;
 }
 
 nav {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .nav-bar-left {
-    gap: 32px;
+  gap: 32px;
 }
 
 .header {
-    flex-direction: column;
-    padding: 470px 0px;
+  padding: 300px 0px;
 }
 
-.header, .nav-bar-left {
-    cursor: default;
+.header,
+.nav-bar-left {
+  cursor: default;
 }
 
 a {
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
 }
 
-h1, h2 {
-    text-align: center;
+h1,
+h2 {
+  text-align: center;
 }
 
 h1 {
-    font-size: 128px;
-    font-family: 'mabry_problack';
+  font-size: 128px;
+  font-family: "mabry_problack";
 }
 
 h2 {
-    font-size: 72px;
-    padding: 100px 0px;
-    font-family: 'mabry_probold';
+  font-size: 72px;
+  padding: 100px 0px;
+  font-family: "mabry_probold";
 }
 
 h3 {
-    font-size: 48px;
-    font-family: 'mabry_proregular';
+  font-size: 48px;
+  font-family: "mabry_proregular";
 }
 
-.AboutMe h2, .AboutMe p, .ProfessionalExperience h2, .ProfessionalExperience p {
-    color: #FFF;
+.AboutMe h2,
+.AboutMe p,
+.ProfessionalExperience h2,
+.ProfessionalExperience p,
+.Contact-box-infos a {
+  color: #fff;
 }
 
-.button {
-    padding: 10px 20px;
-    border: 3px solid #000;
+.down-nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 64px;
+  gap: 64px;
+  padding-bottom: 32px;
 }
-/*
-.button:hover {
-
-    box-shadow: 0.25rem 0.25rem 0rem #000;
-    background-color: #000;
-    color: #FF90E8;
-}
-*/
 
 .ligne {
-    border: 2px solid #000;
+  border: 2px solid #000;
+  width: 1200px;
+}
+
+.down-nav-bar .ligne {
+  width: 1565px;
 }
 
 .Skills h3 {
-    padding: 100px 0px 100px 100px;
+  padding: 100px 0px;
 }
 
 .Skills img {
-    height: 128px;
-}
-
-.Skills .paragraphe {
-    padding-left: 100px;
+  height: 128px;
 }
 
 .Skills-box {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .Skills-box-grid {
-    display: grid;
-    grid-template-columns: 250px 250px 250px 250px 250px 250px;
-    grid-template-rows: 250px;
-    gap: 50px;
+  display: grid;
+  grid-template-columns: 250px 250px 250px 250px 250px 250px;
+  grid-template-rows: 250px;
+  gap: 50px;
 }
 
 .Skills-box-grid-long {
-    grid-template-rows: 250px 250px;
+  grid-template-rows: 250px 250px;
 }
 
 .Skills-box-grid-one {
-    border-radius: 20px;
-    background-color: #FFF;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.15);
-    transition: all linear .3s;
-    border: 2px solid #000
+  border-radius: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 0.15);
+  transition: all linear 0.3s;
+  border: 3px solid #000;
 }
 
 .Skills-box-grid-one:hover {
-    background-color: #FF90E8;
-    -ms-transform: scale(1.1); /* IE 9 */
-    -webkit-transform: scale(1.1); /* Safari 3-8 */
-    transform: scale(1.1);
+  background-color: #000;
+  color: #fff;
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+  box-shadow: 0px 0px 35px 0px #ff90e8;
 }
 
 .box {
-    padding-top: 20px;
-    margin-top: 10px;
-    text-align: center;
-    width: 250px;
-    border-top: 2px solid #000
+  padding-top: 20px;
+  margin-top: 10px;
+  text-align: center;
+  width: 250px;
+  border-top: 3px solid #000;
 }
 
+.Contact-box-infos {
+  background-color: #000;
+}
 
+@media screen and (max-width: f) {
+}
+
+/* Au dézoomage, les h3 restent au centre*/
+
+/* BOUTONS */
+
+.button {
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  padding: 10px 20px;
+  background-color: #ff90e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #000;
+  gap: 10px;
+  border: 3px solid #000;
+  outline: none;
+  overflow: hidden;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  color: #ff90e8;
+  background-color: #000;
+}
+
+.button:hover .icon {
+  transform: translate(4px);
+}
+
+.button:hover::before {
+  animation: shine 1.5s ease-out infinite;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
