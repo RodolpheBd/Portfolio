@@ -1,0 +1,518 @@
+// Importations des design tokens
+@import "variables.scss";
+
+* {
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  margin: 0;
+  padding: 0;
+
+  &::selection {
+    background: $color-primary;
+  }
+}
+
+@font-face {
+  font-family: $font-family-mabry-black;
+  src: url("/src/assets/fonts/MabryBlack/mabrypro-black-webfont.woff2")
+      format("woff2"),
+    url("/src/assets/fonts/MabryBlack/mabrypro-black-webfont.woff")
+      format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: $font-family-mabry-bold;
+  src: url("/src/assets/fonts/MabryBold/mabrypro-bold-webfont.woff2")
+      format("woff2"),
+    url("/src/assets/fonts/MabryBold/mabrypro-bold-webfont.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: $font-family-mabry-regular;
+  src: url("/src/assets/fonts/MabryRegular/mabrypro-regular-webfont.woff2")
+      format("woff2"),
+    url("/src/assets/fonts/MabryRegular/mabrypro-regular-webfont.woff")
+      format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+
+.logo {
+  border: $border-large solid $color-black;
+  padding: $padding-base;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $color-primary;
+}
+
+a {
+  color: $color-black;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: $font-family-mabry-black;
+  font-size: $font-size-h1;
+  text-align: center;
+}
+
+h2 {
+  font-family: $font-family-mabry-bold;
+  font-size: $font-size-h2;
+  padding: $gap-ultraLarge 0;
+  text-align: center;
+}
+
+h3 {
+  font-family: $font-family-mabry-regular;
+  font-size: $font-size-h3;
+}
+
+.button {
+  border: $border-large solid $color-black;
+  font-weight: bold;
+  outline: none;
+  padding: $padding-base;
+  transition: 0.3s ease;
+  cursor: pointer;
+
+  &-primary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-primary;
+    color: $color-black;
+    overflow: hidden;
+    position: relative;
+
+    &:hover {
+      background-color: $color-black;
+      color: $color-primary;
+      transform: scale(1.05);
+
+      &::before {
+        animation: shine 1.5s ease-out infinite;
+        background-image: linear-gradient(
+          120deg,
+          rgba(255, 255, 255, 0) 30%,
+          rgba(255, 255, 255, 0.8),
+          rgba(255, 255, 255, 0) 70%
+        );
+        content: "";
+        height: 100%;
+        left: -999px;
+        opacity: 0.6;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  &-secondary {
+    background-color: $color-white;
+    border-radius: $border-radius-small;
+
+    &:hover {
+      background-color: $color-primary;
+      border-color: $color-black;
+      box-shadow: 5px 5px 0 0 $color-white;
+      color: $color-black;
+      transform: translateY(-4px) translateX(-2px);
+    }
+
+    &:active {
+      box-shadow: 0 0 0 0 $color-white;
+      transform: translateY(2px) translateX(1px);
+    }
+  }
+}
+
+header {
+  height: 100%;
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $padding-large;
+
+    &_left {
+      display: flex;
+      align-items: center;
+      gap: $gap-large;
+      font-weight: bold;
+      cursor: default;
+    }
+
+    &_center {
+      display: flex;
+      align-items: center;
+    }
+
+    &_right {
+      &-menu {
+        display: none;
+        transition: right 0.3s ease;
+
+        &Active {
+          display: flex;
+          flex-direction: column;
+          gap: $gap-small;
+          background-color: $color-black;
+          height: 100%;
+          padding: 50px 10px;
+          position: absolute;
+          right: 0;
+          top: 0;
+          z-index: 1;
+
+          & a {
+            display: block;
+            border-radius: $border-radius-small;
+            color: $color-white;
+            padding: $padding-base;
+            text-align: center;
+            text-decoration: none;
+
+            &:hover {
+              background-color: $color-primary;
+              color: $color-black;
+            }
+          }
+        }
+      }
+    }
+
+    &_down {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: $gap-large;
+      margin: $margin-large;
+      padding-bottom: $image-small;
+
+      & .navbar_line {
+        width: 1565px; //
+      }
+    }
+
+    &_line {
+      border: $border-medium solid $color-black;
+      width: 1200px; //
+    }
+  }
+
+  .headerMain {
+    padding: $padding-header;
+    cursor: default;
+
+    &_content {
+      display: flex;
+      justify-content: center;
+      gap: 368px; //
+      font-weight: bold;
+    }
+  }
+}
+
+.aboutMe {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: $gap-large;
+  background-color: $color-black;
+  border-top-left-radius: $border-radius-large;
+  border-top-right-radius: $border-radius-large;
+  color: $color-white;
+  height: 1080px; //
+
+  &_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: $gap-ultraLarge;
+  }
+
+  &_informations {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: $gap-medium;
+    width: 800px; //
+
+    & p {
+      text-align: center;
+    }
+  }
+
+  &_image {
+    display: flex;
+    flex-direction: column-reverse;
+
+    & img {
+      width: 810px; //
+    }
+  }
+}
+
+.skills {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $color-white;
+  padding-bottom: $gap-ultraLarge;
+  width: 1920px; //
+
+  & img {
+    height: 128px; //
+  }
+
+  &_section {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-ultraLarge;
+  }
+
+  &_container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &_box {
+    display: grid;
+    gap: $gap-medium;
+    grid-template-columns: repeat(6, 250px);
+    grid-template-rows: 250px;
+
+    &-tworows {
+      grid-template-rows: repeat(2, 250px);
+    }
+  }
+
+  &_item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $color-white;
+    border: $border-large solid $color-black;
+    border-radius: $border-radius-medium;
+    box-shadow: 0px 0px 35px 0px rgba(77, 52, 52, 0.15);
+    font-weight: bold;
+    overflow: hidden;
+    position: relative;
+    transition: all linear 0.3s;
+    cursor: default;
+
+    &-veille {
+      cursor: pointer;
+    }
+
+    &:hover {
+      background-color: $color-hover;
+      box-shadow: 0px 0px 35px 0px $color-hover;
+      transform: scale(1.1);
+
+      &::before {
+        animation: shine 1.5s ease-out infinite;
+        background-image: linear-gradient(
+          120deg,
+          rgba(255, 255, 255, 0) 30%,
+          rgba(255, 255, 255, 0.8),
+          rgba(255, 255, 255, 0) 70%
+        );
+        content: "";
+        height: 100%;
+        left: -999px;
+        opacity: 0.6;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+  }
+
+  &_description {
+    border-top: $border-large solid #000;
+    padding-top: 20px; //
+    text-align: center;
+    width: 250px; //
+  }
+}
+
+.professionalExperiences {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $color-black;
+  height: 1080px; //
+  width: 1920px; //
+
+  & h2 {
+    color: $color-white;
+  }
+
+  &_container {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-small;
+    background-color: #fff;
+    border-radius: $border-radius-medium;
+    padding: $padding-container;
+    width: 1000px; //
+  }
+
+  &_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $gap-small;
+    border-bottom: $border-medium solid black;
+    padding-bottom: $gap-small;
+
+    & img {
+      height: $image-small;
+    }
+  }
+
+  &_informations {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-small;
+    text-align: justify;
+  }
+
+  &_download {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-small;
+  }
+
+  & ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    text-decoration: none;
+  }
+}
+
+.projects {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: $color-white;
+  border-bottom-left-radius: $border-radius-large;
+  border-bottom-right-radius: $border-radius-large;
+  height: 1080px; //
+  width: 1920px; //
+  &_container {
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: $gap-small;
+    padding: $padding-container;
+    border-radius: $border-radius-medium;
+    background-color: $color-black;
+    color: $color-white;
+  }
+  &_informations {
+    text-align: justify;
+  }
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+
+  & img {
+    height: $image-small;
+  }
+
+  &_container {
+    display: flex;
+    gap: $gap-ultraLarge;
+  }
+
+  &_informations {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-small;
+    background-color: $color-black;
+    border-radius: $border-radius-medium;
+    padding: $padding-container;
+    height: 500px; //
+    width: 500px; //
+
+    & a {
+      color: $color-white;
+
+      &:hover {
+        color: $color-hover;
+      }
+    }
+  }
+
+  &_box {
+    display: flex;
+    align-items: center;
+    gap: $gap-small;
+  }
+
+  &_sendMail {
+    display: flex;
+    flex-direction: column;
+    gap: $gap-small;
+    background-color: $color-black;
+    border-radius: $border-radius-medium;
+    padding: $padding-container;
+    height: 500px; //
+    width: 900px; //
+
+    & input,
+    textarea {
+      border: $border-large solid $color-black;
+      border-radius: $border-radius-small;
+      font-weight: bold;
+      padding: $padding-base;
+
+      &::placeholder {
+        color: $color-black;
+      }
+    }
+
+    & textarea {
+      height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: f) {
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}
