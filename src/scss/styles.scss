@@ -14,29 +14,25 @@
 
 @font-face {
   font-family: $font-family-mabry-black;
-  src: url("/src/assets/fonts/MabryBlack/mabrypro-black-webfont.woff2")
-      format("woff2"),
-    url("/src/assets/fonts/MabryBlack/mabrypro-black-webfont.woff")
-      format("woff");
+  src: url("../fonts/mabryblack/mabrypro-black-webfont.woff2") format("woff2"),
+    url("../fonts/mabryblack/mabrypro-black-webfont.woff") format("woff");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: $font-family-mabry-bold;
-  src: url("/src/assets/fonts/MabryBold/mabrypro-bold-webfont.woff2")
-      format("woff2"),
-    url("/src/assets/fonts/MabryBold/mabrypro-bold-webfont.woff") format("woff");
+  src: url("../fonts/mabrybold/mabrypro-bold-webfont.woff2") format("woff2"),
+    url("../fonts/mabrybold/mabrypro-bold-webfont.woff") format("woff");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: $font-family-mabry-regular;
-  src: url("/src/assets/fonts/MabryRegular/mabrypro-regular-webfont.woff2")
+  src: url("../fonts/mabryregular/mabrypro-regular-webfont.woff2")
       format("woff2"),
-    url("/src/assets/fonts/MabryRegular/mabrypro-regular-webfont.woff")
-      format("woff");
+    url("../fonts/mabryregular/mabrypro-regular-webfont.woff") format("woff");
   font-style: normal;
   font-weight: normal;
 }
