@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: "mabry_problack";
-  src: url("src/assets/fonts/MabryBlack/mabrypro-black-webfont.woff2") format("woff2"), url("src/assets/fonts/MabryBlack/mabrypro-black-webfont.woff") format("woff");
+  src: url("src/assets/fonts/mabryblack/mabrypro-black-webfont.woff2") format("woff2"), url("src/assets/fonts/mabryblack/mabrypro-black-webfont.woff") format("woff");
   font-style: normal;
   font-weight: normal;
 }
