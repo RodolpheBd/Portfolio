@@ -16,13 +16,13 @@
 }
 @font-face {
   font-family: "mabry_probold";
-  src: url("src/assets/fonts/MabryBold/mabrypro-bold-webfont.woff2") format("woff2"), url("src/assets/fonts/MabryBold/mabrypro-bold-webfont.woff") format("woff");
+  src: url("src/assets/fonts/mabrybold/mabrypro-bold-webfont.woff2") format("woff2"), url("src/assets/fonts/mabrybold/mabrypro-bold-webfont.woff") format("woff");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   font-family: "mabry_proregular";
-  src: url("src/assets/fonts/MabryRegular/mabrypro-regular-webfont.woff2") format("woff2"), url("src/assets/fonts/MabryRegular/mabrypro-regular-webfont.woff") format("woff");
+  src: url("src/assets/fonts/mabryregular/mabrypro-regular-webfont.woff2") format("woff2"), url("src/assets/fonts/mabryregular/mabrypro-regular-webfont.woff") format("woff");
   font-style: normal;
   font-weight: normal;
 }
