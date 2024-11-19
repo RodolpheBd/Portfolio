@@ -223,6 +223,7 @@ header {
 .aboutMe {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
   gap: $gap-large;
   background-color: $color-black;
@@ -233,9 +234,7 @@ header {
 
   &_container {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    gap: $gap-ultraLarge;
   }
 
   &_informations {
@@ -247,7 +246,7 @@ header {
     width: 800px; //
 
     & p {
-      text-align: center;
+      text-align:center;
     }
   }
 
@@ -256,7 +255,9 @@ header {
     flex-direction: column-reverse;
 
     & img {
-      width: 810px; //
+      height: 800px;
+      width: 610px;
+      border-radius: $border-radius-large;
     }
   }
 }
@@ -407,10 +408,11 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
+  gap: $gap-medium;
   background-color: $color-white;
   border-bottom-left-radius: $border-radius-large;
   border-bottom-right-radius: $border-radius-large;
-  height: 1080px; //
+  height: 1530px; //
   width: 1920px; //
   &_container {
     width: 1000px;
@@ -426,6 +428,14 @@ header {
   &_informations {
     text-align: justify;
   }
+  & a {
+    color: $color-white;
+    font-weight: bold;
+    &:hover {
+      color: $color-hover;
+    }
+  }
+  
 }
 
 .contact {

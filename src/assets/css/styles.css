@@ -187,6 +187,7 @@ header .headerMain_content {
 .aboutMe {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
   gap: 64px;
   background-color: #000;
@@ -197,9 +198,7 @@ header .headerMain_content {
 }
 .aboutMe_container {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  gap: 100px;
 }
 .aboutMe_informations {
   display: flex;
@@ -217,7 +216,9 @@ header .headerMain_content {
   flex-direction: column-reverse;
 }
 .aboutMe_image img {
-  width: 810px;
+  height: 800px;
+  width: 610px;
+  border-radius: 50px;
 }
 
 .skills {
@@ -344,10 +345,11 @@ header .headerMain_content {
   display: flex;
   align-items: center;
   flex-direction: column;
+  gap: 50px;
   background-color: #fff;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-  height: 1080px;
+  height: 1530px;
   width: 1920px;
 }
 .projects_container {
@@ -363,6 +365,13 @@ header .headerMain_content {
 }
 .projects_informations {
   text-align: justify;
+}
+.projects a {
+  color: #fff;
+  font-weight: bold;
+}
+.projects a:hover {
+  color: #ff90e8;
 }
 
 .contact {
