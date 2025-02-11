@@ -297,11 +297,16 @@ header .headerMain_content {
   align-items: center;
   flex-direction: column;
   background-color: #000;
-  height: 1080px;
+  height: 1730px;
   width: 1920px;
 }
 .professionalExperiences h2 {
   color: #fff;
+}
+.professionalExperiences_section {
+  display: flex;
+  gap: 64px;
+  flex-direction: column;
 }
 .professionalExperiences_container {
   display: flex;
