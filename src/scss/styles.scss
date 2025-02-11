@@ -246,7 +246,7 @@ header {
     width: 800px; //
 
     & p {
-      text-align:center;
+      text-align: center;
     }
   }
 
@@ -353,11 +353,17 @@ header {
   align-items: center;
   flex-direction: column;
   background-color: $color-black;
-  height: 1080px; //
+  height: 1730px; //
   width: 1920px; //
 
   & h2 {
     color: $color-white;
+  }
+
+  &_section {
+    display: flex;
+    gap: $gap-large;
+    flex-direction: column;
   }
 
   &_container {
@@ -435,7 +441,6 @@ header {
       color: $color-hover;
     }
   }
-  
 }
 
 .contact {
